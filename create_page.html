@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Setup page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./css/my_font.css">
+	<link rel="stylesheet" type="text/css" href="./css/create.css">
+	<script type="text/javascript" src="./js/create.js"></script>
+</head>
+<body>
+	<!--Begining of header-->
+	<div class="header"></div>
+	<!--End of header-->
+
+	<!--Here is the starting of my content-->
+	<div class="all_slide">
+		<div class="slide_1" id="sld1" style="display: block;">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld2')">Next</div>
+			</div>
+			<div class="content">
+				<h2>Create your account</h2>
+				<div class="input_wrapper" title="Name" foot_text="0/50">
+					<input type="" name="">
+				</div>
+				<div class="input_wrapper" title="Phone">
+					<input type="" name="">
+				</div>
+				<a>Use email instead</a>
+				<h3>Date of birth</h3>
+				<p>This will not be shown publicly. confirm your age, even if this account is for a business, a pet, or something else.</p>
+				<div class="input_group">
+					<div class="input_wrapper">
+						<select>
+							<option>January</option>
+						</select>
+					</div>
+					<div class="input_wrapper">
+						<select>
+							<option>31</option>
+						</select>
+					</div>
+					<div class="input_wrapper">
+						<select>
+							<option>2021</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide_2" id="sld2">
+			<div class="navigation">
+				<div class="back" onclick="_handler('sld1')"></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld3')">Next</div>
+			</div>
+			<div class="content">
+				<h2>Customize your experience</h2>
+				<h3>Track where you see Twitter across the web</h3>
+				<div>
+					<p>Twitter uses data tom personalize your experience, This web browsing history will never be stored with your name, email, or phone number.</p>
+					<input type="checkbox" name="">
+				</div>
+				<p>For more details about these settings, visit the <a>Help center</a></p>
+			</div>
+		</div>
+		<div class="slide_3" id="sld3">
+			<h2>Verify phone</h2>
+			<p>We'll text your verification code to your standard SMS fees may apply</p>
+			<div class="button_group">
+				<div class="btn button-1" onclick="_handler('sld1')">Edit</div>
+				<div class="btn button-2" onclick="_handler('sld4')">Ok</div>
+			</div>
+		</div>
+		<div class="slide_4" id="sld4">
+			<div class="navigation">
+				<div class="back" onclick="_handler('sld3')"></div>
+				<div class="logo"></div>
+				<div class="next btn">Next</div>
+			</div>
+			<div class="content">
+				<h2>We sent you a code</h2>
+				<h3>Enter it below to verify 980</h3>
+				<div class="input_wrapper" title="Verification code">
+					<input type="" name="">
+				</div>
+				<a>Didn't recieve SMS?</a>
+			</div>
+		</div>
+	</div>
+	<!--Here is the ending of content-->
+
+	<!--Beginning of footer-->
+	<div class="footer"></div>
+	<!--Ending of footer-->
+
+</body>
+</html>

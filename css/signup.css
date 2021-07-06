@@ -1,0 +1,183 @@
+:root{
+	--black:#000;
+	--ash:#3a3a39;
+	--white:#fff;
+	--light-blue:#42c0fb;
+	--light-ash:#909089;
+	--dim-blue:#0f80b5;
+}
+
+body{
+	margin:0;
+	padding: 3rem;
+	padding-bottom: 0em;
+	font-family: poppins,sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+h2{
+	font-weight: bolder;
+	margin-bottom: 0rem;
+	margin-top: 3rem;
+}
+
+h3{
+	font-weight: bold;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color:var(--light-blue);
+}
+
+.button_group {
+	display: flex;
+	gap:3rem;
+}
+
+.btn{
+	padding: 0.5rem 6rem;
+	border:solid 2px var(--light-blue);
+	border-radius: 2rem;
+	color:var(--white);
+	background-color:var(--light-blue);
+	font-weight: bold;
+	text-align: center; 
+	/*transition: background,color,border 800ms ease-in;*/ 
+}
+
+
+.btn.button-1{
+	background-color: transparent;
+	color:var(--light-blue);
+}
+
+.btn:hover{
+	border-color:var(--light-blue);
+}
+
+.btn.button-1:hover{
+	color:var(--white);
+	background-color:var(--light-blue);
+}
+
+.btn:active{
+	border-color: var(--white);
+}
+
+.content{
+	display: flex;
+	box-shadow: 0px 0px 2px black;
+	width: 80%;
+}
+
+.content .section-1{
+	width:40%;
+	min-height: 30rem;
+	background-color: var(--dim-blue);
+	background-image: url(../assets/twitter_white.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding-top: 16rem;
+	padding-bottom: 8rem;
+	display: flex;
+	
+}
+
+.content .section-1 ul{
+	display: flex;
+	flex-direction: column;
+	gap:1.5rem;
+	list-style: none;
+	font-weight: 600;
+}
+
+.content .section-1 li{
+	display: flex;
+	align-items: center;
+}
+.content .section-1 ul img{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 5px;
+}
+
+.content .section-2{
+	width: 60%;
+	padding: 1rem 10rem;
+	padding-top: 3rem;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.button_group{
+	flex-direction: column;
+	gap:1.5rem;
+}
+
+.button_group .btn{
+	padding: 0.5rem 5rem;
+}
+
+.logo{
+	width: 5rem;
+	height: 5rem;
+	background-image: url(../assets/twitter_blue.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+@media (max-width: 1236px){
+	.content{
+		width: 90%;
+	}
+
+	.content .section-2{
+		padding: 4rem 5rem;
+	}
+}
+
+@media (max-width: 1024px){
+	
+	body{
+		padding: 2rem 1rem;
+	}
+
+	.content{
+		width: 95%;
+	}
+
+	.content .section-2{
+		padding: 4rem 5rem;
+	}
+}
+
+@media (max-width: 740px){
+
+	body{
+		padding: 0.5rem;
+	}
+
+	.content{
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		width: 98%;
+	}
+
+	.content .section-1,.content .section-2{
+		width: 100%;
+		padding: 4rem 1.5rem;
+		min-height: 10rem;
+	}
+	
+}

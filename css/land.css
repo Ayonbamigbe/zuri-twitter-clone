@@ -1,0 +1,176 @@
+:root{
+	--black:#000;
+	--ash:#3a3a39;
+	--light-blue:;
+	--white:#fff;
+	--light-blue:#42c0fb;
+}
+
+body{
+	margin:0;
+	font-family: poppins,sans-serif;
+	user-select: none;
+}
+.content .section-1{
+	display: flex;
+	flex-direction: column;
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 1rem;
+	font-weight: bold;
+	font-style:normal;
+	width: auto;
+	padding: 3em;
+	padding-left: 30%;
+
+}
+
+.content .section-1 .twitter_logo{
+	background-image: url(../assets/twitter_white.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 5rem;
+	height: 5rem;
+}
+
+.content .section-1 .font_big{
+	font-weight: bolder;
+	font-size: 2rem;
+	margin:0.25rem 0em;
+}
+
+.content .section-1 .font_small{
+	word-spacing: 0.8rem;
+	margin:0.25rem 0em;
+	margin-bottom: 5rem;
+}
+
+.button_group {
+	display: flex;
+	gap:3rem;
+}
+
+.btn{
+	padding: 0.7rem 3rem;
+	border:solid 2px var(--white);
+	border-radius: 2rem;
+	/*transition: background,color,border 800ms ease-in; */
+}
+
+.content .section-1 .btn{
+	border-color: var(--light-blue);
+}
+
+.content .section-1 .btn.button-1{
+
+	background-color:var(--light-blue); 
+}
+
+.content .section-1 .btn.button-2{
+	color:var(--light-blue);
+}
+
+.content .section-1 .btn:hover{
+	color:white;
+	background-color:var(--light-blue);
+	border-color:var(--light-blue);
+}
+
+.content .section-1 .btn:active{
+	border-color: var(--white);
+}
+
+.section-2{
+	display: flex;
+	width: 100%;
+	height: 30rem;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../assets/cloud.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.section-2 .foreground_twit{
+	background-image: url(../assets/twitter_white.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 70%;
+	height: 99%;
+}
+
+.cookies_section{
+	display: flex;
+	flex-wrap: wrap;
+	gap:1rem;
+	font-size: 0.9rem;
+	align-items: center;
+	padding: 3rem 1.5rem;
+	background-color: var(--ash);
+	color: var(--white);
+}
+
+.cookies_section .btn{
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.cookies_section .btn:hover{
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.cookies_section .btn:active{
+	border-color: var(--black);
+}
+
+.footer{
+	display: flex;
+	gap:2rem;
+	flex-direction: column;
+	background-color: var(--black);
+	color: var(--white);
+	padding: 1.5rem 0rem;
+}
+
+.footer ul{
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	padding: 0rem 1rem;
+	gap:1.3rem;
+}
+
+
+@media (max-width: 768px){
+	.content .section-1{
+		padding: 2rem;
+	}
+
+	.content .section-1 .font_small{
+		margin-bottom: 3rem;
+	}
+
+	.content .section-1 .button_group{
+		gap:0.8rem;
+	}
+
+	.content .section-1 .btn{
+		padding: 0.5rem 2rem;
+		border-radius: 1.2rem;
+	}
+
+	.content .section-2{
+		height: 18rem;
+	}
+
+	.content .section-2 div{
+		background-size: contain;
+	}
+
+	.content .cookies_section{
+		padding: 1rem;
+	}
+}

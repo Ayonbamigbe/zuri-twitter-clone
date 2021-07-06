@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Setup page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./css/my_font.css">
+	<link rel="stylesheet" type="text/css" href="./css/create.css">
+	<script type="text/javascript" src="./js/create.js"></script>
+</head>
+<body>
+	<!--Begining of header-->
+	<div class="header"></div>
+	<!--End of header-->
+
+	<!--Here is the starting of my content-->
+	<div class="all_slide">
+		<div class="slide_1" id="sld1" style="display: block;">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld2')">Next</div>
+			</div>
+			<div class="content">
+				<h2>Create your account</h2>
+				<div class="input_wrapper" title="Name" foot_text="0/50">
+					<input type="" name="" onkeyup="_update_text_len(event,this)" onkeydown="_write_text(event,this)">
+				</div>
+				<div class="input_wrapper" title="Phone">
+					<input type="" name="">
+				</div>
+				<a>Use email instead</a>
+				<h3>Date of birth</h3>
+				<p>This will not be shown publicly. confirm your age, even if this account is for a business, a pet, or something else.</p>
+				<div class="input_group">
+					<div class="input_wrapper" title="month">
+						<select>
+							<option>January</option>
+						</select>
+					</div>
+					<div class="input_wrapper" title="day">
+						<select>
+							<option>31</option>
+						</select>
+					</div>
+					<div class="input_wrapper" title="year">
+						<select>
+							<option>2021</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide_2" id="sld2">
+			<div class="navigation">
+				<div class="back" onclick="_handler('sld1')"></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld3')">Next</div>
+			</div>
+			<div class="content">
+				<h2>Customize your experience</h2>
+				<h3>Track where you see Twitter across the web</h3>
+				<div>
+					<p>Twitter uses data tom personalize your experience, This web browsing history will never be stored with your name, email, or phone number.</p>
+					<input type="checkbox" name="">
+				</div>
+				<p>For more details about these settings, visit the <a>Help center</a></p>
+			</div>
+		</div>
+		<div class="slide_3" id="sld3">
+			<h2>Verify phone</h2>
+			<p>We'll text your verification code to your standard SMS fees may apply</p>
+			<div class="button_group">
+				<div class="btn button-1" onclick="_handler('sld1')">Edit</div>
+				<div class="btn button-2" onclick="_handler('sld4')">Ok</div>
+			</div>
+		</div>
+		<div class="slide_4" id="sld4">
+			<div class="navigation">
+				<div class="back" onclick="_handler('sld3')"></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld5')">Next</div>
+			</div>
+			<div class="content">
+				<h2>We sent you a code</h2>
+				<h3>Enter it below to verify 980</h3>
+				<div class="input_wrapper" title="Verification code">
+					<input type="" name="">
+				</div>
+				<a>Didn't recieve SMS?</a>
+			</div>
+		</div>
+		<div class="slide_5" id="sld5">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld6')">Next</div>
+			</div>
+			<div class="content">
+				<h2>You'll need a password</h2>
+				<p>Make sure it's 8 character or more</p>
+				<div class="input_wrapper" title="Password">
+					<input type="password" name="" id="input_passq233">
+				</div>
+				<a onclick="_toggle_password('input_passq233',this)">Reveal password</a>
+			</div>
+		</div>
+		<div class="slide_6" id="sld6">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld7')">Skip for now</div>
+			</div>
+			<div class="content">
+				<h2>Pick a profile picture</h2>
+				<p>Have a favourite selfie? Upload it now</p>
+				<div class="circle_wrapper">
+					<div class="circle_pics"></div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="slide_5 slide_7" id="sld7">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld8')">Next</div>
+			</div>
+			<div class="content">
+				<h2>Describe yourself</h2>
+				<p>What makes you special? Don't think too hard, just have fun with it.</p>
+				<div class="input_wrapper textarea_wrapper" title="Your bio" foot_text=0/160>
+					<textarea onkeyup="_update_text_len(event,this)" onkeydown="_write_text(event,this)"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="slide_1 slide_8" id="sld8">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld9')">Skip now</div>
+			</div>
+			<div class="content">
+				<h1>What are you interested in?</h1>
+				<p>Select some topics yuur interested in to help personalize your twitter experience, starting with finding people to follow</p>
+				<div class="search_box">
+					<input type="" name="" width="100%" placeholder="searching">
+				</div>
+				<div class="my_list">
+					<div class="group">
+						<h2 class="grp_header">Sports</h2>
+						<ul>
+							<li class="grp_btn">NFL</li>
+							<li class="grp_btn">NBA</li>
+							<li class="grp_btn">MLB</li>
+							<li class="grp_btn">NHL</li>
+							<li class="grp_btn">Soccer</li>
+						</ul>
+						<div class="grp_footer">
+							<div class="grp_btn">Show more <span>+</span></div>
+						</div>
+					</div>
+					<div class="group">
+						<h2 class="grp_header">Sports</h2>
+						<ul>
+							<li class="grp_btn">NFL</li>
+							<li class="grp_btn">NBA</li>
+							<li class="grp_btn">MLB</li>
+							<li class="grp_btn">NHL</li>
+							<li class="grp_btn">Soccer</li>
+						</ul>
+						<div class="grp_footer">
+							<div class="grp_btn">Show more <span>+</span></div>
+						</div>
+					</div>
+					<div class="group">
+						<h2 class="grp_header">News</h2>
+						<ul>
+							<li class="grp_btn">Weather</li>
+							<li class="grp_btn">Health</li>
+							<li class="grp_btn">History</li>
+							<li class="grp_btn">Politics</li>
+							<li class="grp_btn">General</li>
+						</ul>
+						<div class="grp_footer">
+							<div class="grp_btn">Show more <span>+</span></div>
+						</div>
+					</div>
+					<div class="group">
+						<h2 class="grp_header">Music</h2>
+						<ul>
+							<li class="grp_btn">Pop</li>
+							<li class="grp_btn">Hip-Hop/Rap</li>
+							<li class="grp_btn">R&B/Soul</li>
+							<li class="grp_btn">Latino Music</li>
+							<li class="grp_btn">Country</li>
+						</ul>
+						<div class="grp_footer">
+							<div class="grp_btn">Show more <span>+</span></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="slide_1 slide_8 slide_9" id="sld9">
+			<div class="navigation">
+				<div class=""></div>
+				<div class="logo"></div>
+				<div class="next btn" onclick="_handler('sld10')">next</div>
+			</div>
+			<div class="content">
+				<h2>What are you interested in?</h2>
+				<p class="_grey_text">When you follow someone you will see their Tweets in your Home Timeline.</p>
+				
+				<div class="table_list">
+					<table>
+						<thead>
+							<td>
+								<h3>You may be interested in</h3>
+							</td>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="./assets/q9.png">
+								</td>
+								<td>
+									<div class="bold_title">BBC News Nigeria</div>
+									<p class="_grey_text">@bbcnigeria</p>
+									<p class="_grey_text">Nigeria</p>
+								</td>
+								<td>
+									<div class="btn button-1">follow</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./assets/q10.png">
+								</td>
+								<td>
+									<div class="bold_title">Baburan Bhattarai</div>
+									<p class="_grey_text">@brb1956</p>
+									<p class="_grey_text">Marketing Cordinator Binford ltd. Aland Islands http://www.treequote.com</p>
+								</td>
+								<td>
+									<div class="btn button-1">follow</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./assets/q9.png">
+								</td>
+								<td>
+									<div class="bold_title">BBC News Nigeria</div>
+									<p class="_grey_text">@bbcnigeria</p>
+									<p class="_grey_text">Nigeria</p>
+								</td>
+								<td>
+									<div class="btn button-1">follow</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+		<div class="slide_10" id="sld10">
+			<div class="content">
+				<div class="bell"></div>
+				<h2>Turn on notification</h2>
+				<p>Get the most out of Twitter by staying up to dat with what's happpening</p>
+				<div class="button_group">
+					<div class="btn">Allow notification</div>
+					<div class="btn button-1"  onclick="_handler('sld11')">Skip for now</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide_11" id="sld11">
+			<div class="header">
+				<h3>Home</h3>
+				<div class="_img_in_head"></div>
+			</div>
+			<div class="content">
+				<div class="section-1">
+					<div class="circle_pics"></div>
+					<div class="">
+						<p>What's happening?</p>
+						<div class="wid_list">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+					<div class="">
+						<div class="btn btn_disabled">Tweet</div>
+					</div>
+				</div>
+				<div class="section-2">
+					<h2>Welcome to Twitter!</h2>
+					<p>This is the best place to see what's happening your world. Find some people and topics to follow now.</p>
+					<div class="btn">Lets go!</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Here is the ending of content-->
+
+	<!--Beginning of footer-->
+	<div class="footer"></div>
+	<!--Ending of footer-->
+
+</body>
+</html>
