@@ -35,7 +35,10 @@ const validateMiddleWare = require("./middleware/validationMiddleware");
 
 
 app.use(expressSession({
-    secret: 'keyboard cat'
+    secret: 'keyboard cat',
+    name: 'keyboard name',
+    resave: true,
+    saveUninitialized: true
 }));
 
 app.use(flash());
@@ -49,7 +52,9 @@ app.use("*", (req, res, next) => {
     next();
 });
 
-mongoose.connect(dbConfig.url, {
+//dbConfig.url
+
+mongoose.connect( 'mongodb://localhost/my_database', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -86,7 +91,7 @@ app.get('/homepage', homeController);
 app.get('/tweet/:id', getTweetController);
 app.post('/tweets/store', authMiddleWare, storeTweetController);
 app.get('/auth/register', redirectIfAuthenticatedMiddleWare, newUserController);
-app.post('/users/register', redirectIfAuthenticatedMiddleWare, storeUserController);
+app.post('/users/register', redirectIfAuthenticatedMiddleWare,storeUserController);
 app.get('/auth/login', redirectIfAuthenticatedMiddleWare, loginController);
 app.post('/users/login', redirectIfAuthenticatedMiddleWare, loginUserController);
 app.get('/auth/logout', logoutController);

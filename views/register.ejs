@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="/css/my_font.css">
 	<link rel="stylesheet" type="text/css" href="/css/create.css">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<!--Begining of header-->
@@ -15,31 +16,36 @@
 	
 	<div class="all_slide">
 		<div class="slide_1" id="sld1" style="display: block;">
+            
+            <div class="content">
+            <h2>Create your account</h2>
+            <div>
             <% if(errors != null && errors.length > 0){ %>
-                <ul class="list-group">
-                <% for(var i=0; i < errors.length; i++) { %>
-                    <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
-                <% } %>
-                </ul>
+            <ul class="list-group">
+            <% for(var i=0; i < errors.length; i++) { %>
+                <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+            <% } %>
+            </ul>
             <% } %>
 
 			<form action="/users/register" method="POST" enctype="multipart/form-data">
-				<div class="navigation">
-					<div class=""></div>
-					<div class="logo"></div>
-					<button class="next btn" type="submit">Register</button>
-				</div>
-                <div class="content">
-                    <h2>Create your account</h2>
+                <div class="navigation">
+                <div class=""></div>
+                <div class="logo"></div>
+                <button class="next btn" type="submit">Register</button>
+            </div>
                     <div class="input_wrapper" title="Name" foot_text="0/50">
                         <input type="text" id="username" name="username" value="<%= username %>">
                     </div>
                     <div class="input_wrapper" title="Password">
-                        <input type="text" id="password" name="username" value="<%= password %>">
+                        <input type="password" id="password" name="password" value="<%= password %>">
                     </div>
-                </div>
 			</form>
+            </div>
+            </div>
 		</div>
     </div>
+
+    <%-include('layouts/scripts');-%>
 </body>
 </html>
