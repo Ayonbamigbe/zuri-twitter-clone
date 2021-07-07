@@ -26,7 +26,7 @@ const loginController = require('./controllers/login');
 const loginUserController = require('./controllers/loginUser');
 const logoutController = require('./controllers/logout');
 
-const dbConfig = require('./config/database.config.js')
+const dbConfig = require('./config/database.config');
 
 
 const authMiddleWare = require('./middleware/authMiddleware');
@@ -52,9 +52,9 @@ app.use("*", (req, res, next) => {
     next();
 });
 
-//dbConfig.url
+//'mongodb://localhost/my_database'
 
-mongoose.connect( 'mongodb://localhost/my_database', {
+mongoose.connect(dbConfig.url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
