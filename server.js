@@ -26,6 +26,8 @@ const loginController = require('./controllers/login');
 const loginUserController = require('./controllers/loginUser');
 const logoutController = require('./controllers/logout');
 
+const dbConfig = require('./config/database.config.js')
+
 
 const authMiddleWare = require('./middleware/authMiddleware');
 const redirectIfAuthenticatedMiddleWare = require('./middleware/redirectIfAuthenticatedMiddleware');
@@ -47,7 +49,7 @@ app.use("*", (req, res, next) => {
     next();
 });
 
-mongoose.connect('mongodb://localhost/my_database', {
+mongoose.connect(dbConfig.url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
