@@ -10,6 +10,6 @@ module.exports =(req,res)=>{
             //req.session.validationErrors = validationErrors
             return res.redirect('/auth/register');
         }
-        res.redirect('/')
+        res.redirect('/homepage')
     })
 }

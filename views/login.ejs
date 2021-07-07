@@ -1,58 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<%-include('layouts/header');-%>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/my_font.css">
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+</head>
 
 <body>
+    <!--Begining of header-->
+    <div class="header"></div>
+    <!--End of header-->
+    
+    <!--Here is the starting of my content-->
+    <div class="content">
+        
+        <div class="section-1">
+            <ul>
+                <li>
+                    <img src="/assets/search.svg">
+                    <span>Join the convsersation</span>
+                </li>
+                <li>
+                    <img src="/assets/user-friends.svg">
+                    <span>Hear what people are talking about</span>
+                </li>
+                <li>
+                    <img src="/assets/comment.svg">
+                    <span>Follow you interest</span>
+                </li>
+            </ul>
+        </div>
+        <div class="section-2">
+            <div class="logo"></div>
+            <h2>See whats's happening in the world right now</h2>
+            <h4>Join Twitter today</h4>
+            <div class="button_group">
+                <a class="btn" href="/auth/register">Sign up</a>
+                <div class="btn button-1">Log in</div>
+            </div>
+        </div>
+        
+    </div>
+    <!--Here is the ending of content-->
 
-  <!-- Navigation -->
-  <%-include('layouts/navbar');-%>
-
-  <!-- Page Header -->
-  <header>
-   <h1>Login</h1>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-      <div>
-        <% if(errors != null && errors.length > 0){ %>
+    <!--Beginning of footer-->
+    <div class="footer"></div>
+    <!--Ending of footer-->
+	<% if(errors != null && errors.length > 0){ %>
           <ul class="list-group">
           <% for(var i=0; i < errors.length; i++) { %>
             <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
             <% } %>
           </ul>
         <% } %>
-        <form action="/users/login" method="POST" enctype="multipart/form-data">
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>User Name</label>
-              <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="<%= username %>">
-            </div>
+    <div><form action="/users/login" method="POST" enctype="multipart/form-data">
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>User Name</label>
+            <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="<%= username %>">
           </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Password</label>
-              <input type="password" class="form-control" placeholder="Password" id="password" name="password" value="<%= password %>">
-            </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password" id="password" name="password" value="<%= password %>">
           </div>
-          <br>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Login</button>
-          </div>
-        </form>
-      </div>
-  </div>
-
-  <hr>
-
-  <!-- Bootstrap core JavaScript -->
-  <!-- Custom scripts for this template -->
-  <%-include('layouts/scripts');-%>
-
-  
-  
-
+        </div>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form></div>
 </body>
 
 </html>

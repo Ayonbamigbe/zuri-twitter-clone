@@ -1,58 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<%-include('layouts/header');-%>
-
+<html>
+<head>
+	<title>Signup page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="/css/my_font.css">
+	<link rel="stylesheet" type="text/css" href="/css/create.css">
+</head>
 <body>
+	<!--Begining of header-->
+	<div class="header"></div>
+	<!--End of header-->
 
-  <!-- Navigation -->
-  <%-include('layouts/navbar');-%>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('/img/contact-bg.jpg')">
-    <h1>Register a new account</h1>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-      <div>
-        <% if(errors != null && errors.length > 0){ %>
-          <ul class="list-group">
-          <% for(var i=0; i < errors.length; i++) { %>
-            <li><%= errors[i] %></li>
+	<!--Here is the starting of my content-->
+	
+	<div class="all_slide">
+		<div class="slide_1" id="sld1" style="display: block;">
+            <% if(errors != null && errors.length > 0){ %>
+                <ul class="list-group">
+                <% for(var i=0; i < errors.length; i++) { %>
+                    <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+                <% } %>
+                </ul>
             <% } %>
-          </ul>
-        <% } %>
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>User Name</label>
-              <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="<%= username %>">
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Password</label>
-              <input type="password" class="form-control" placeholder="Password" id="password" name="password" value="<%= password %>">
-            </div>
-          </div>
-          <br>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Register</button>
-          </div>
-        </form>
-      </div>
-  </div>
 
-  <hr>
-
-  <!-- Bootstrap core JavaScript -->
-  <!-- Custom scripts for this template -->
-  <%-include('layouts/scripts');-%>
-
-  
-  
-
+			<form action="/users/register" method="POST" enctype="multipart/form-data">
+				<div class="navigation">
+					<div class=""></div>
+					<div class="logo"></div>
+					<button class="next btn" type="submit">Register</button>
+				</div>
+                <div class="content">
+                    <h2>Create your account</h2>
+                    <div class="input_wrapper" title="Name" foot_text="0/50">
+                        <input type="text" id="username" name="username" value="<%= username %>">
+                    </div>
+                    <div class="input_wrapper" title="Password">
+                        <input type="text" id="password" name="username" value="<%= password %>">
+                    </div>
+                </div>
+			</form>
+		</div>
+    </div>
 </body>
-
 </html>

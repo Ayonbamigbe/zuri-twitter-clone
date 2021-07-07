@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./css/my_font.css">
+	<link rel="stylesheet" type="text/css" href="./css/homepage.css">
+	<script type="text/javascript" src="./js/home.js"></script>
+</head>
+<body class="dark_mode" id="">
+	<span style="visibility: none" id="_scroll_up_id"></span>
+	<a href="#_scroll_up_id"><div class="_my_scroll"></div></a>
+	<div class="body_wrapper">
+		<div class="header">
+			<div class="logo"></div>
+			<div class="_mobile_menu" id="_mobile_menu_slide">
+				<div class="mobile_cls_btn" onclick="_hide('_mobile_menu_slide',_animation_top_to_bottom)"></div>
+				<div class="group _bold">
+					<div>
+						<span class="img qw_home"></span>
+						<span class="txt _blue">Home</span>
+					</div>
+					<div>
+						<span class="img qw_expl"></span>
+						<span class="txt">Explore</span>
+					</div>
+					<div>
+						<span class="img qw_noti"></span>
+						<span class="txt">Notification</span>
+					</div>
+					<div>
+						<span class="img qw_mess"></span>
+						<span class="txt">Messages</span>
+					</div>
+					<div>
+						<span class="img qw_book"></span>
+						<span class="txt">Bookmarks</span>
+					</div>
+					<div>
+						<span class="img qw_list"></span>
+						<span class="txt">Lists</span>
+					</div>
+					<div>
+						<span class="img qw_prof"></span>
+						<span class="txt">Profile</span>
+					</div>
+					<div class="_smallest_mobile" onclick="_show('_other_slide',_animation_left_to_right)">
+						<span class="img qw_bar"></span>
+						<span class="txt">My_side_bar</span>
+					</div>
+					<div  onclick="_to_light(this)">
+						<span class="img qw_lgt"></span>
+						<span class="txt">Change Look</span>
+					</div>
+					<div>
+						<span class="img qw_more"></span>
+						<span class="txt">More</span>
+					</div>
+					
+				</div>
+				<div class="button">
+					<div class="btn">Tweet</div>
+				</div>
+                <% if(loggedIn) { %>
+				<div class="_flex _flex_edt">
+					<img src="./assets/q2.jpeg">
+					<div>
+						<h3>XXXXX</h3>
+						<p class="_grey">@<</p>
+					</div>
+					<button class="_dot">
+						<a href="/auth/logout" >Log out</a>
+                    </button>
+                <% } %>
+				</div>
+			</div>
+			<div class="mobile_btn" onclick="_show('_mobile_menu_slide',_animation_bottom_to_top)"></div>
+		</div>
+		<div class="content">
+			<div class="section-1">
+				<div class="part-1">
+					<h3>Home</h3>
+					<div class="_near_home"></div>
+				</div>
+				<div class="part-2">
+					<img src="./assets/q2.jpeg">
+					<div class="body">
+						<p class="_grey">What's happening?</p>
+						<div class="">
+							<div>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="btn">Tweets</div>
+						</div>
+					</div>
+				</div>
+				<div class="part-3">
+					<div>
+						<img src="./assets/q1.png">
+						<div class="body">
+							<div class="row-1">
+								<div class="_grey">
+									<span class="_bold _black">Dayo Akin</span>
+									<span class="checkmark"></span>
+									<span class="">@DayoAkin</span>
+									<span class="time">53m</span>
+								</div>
+								<div></div>
+							</div>
+							<div class="row-2">Not if we don't work on it</div>
+							<div class="row-wrapper">
+								<div class="row-1">
+									<div class="_grey">
+										<span class="_bold _black">Bassil Sheu</span>
+										<span>@BassilSehu.</span>
+										<span class="time">1hr</span>
+									</div>
+								</div>
+								<div class="row-2">
+									All i know is that a day will come when we will surely escape this sufferness
+								</div>
+							</div>
+							<div class="row-option">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="./assets/q1.png">
+						<div class="body">
+							<div class="row-1">
+								<div class="_grey">
+									<span class="_bold _black">Dayo Akin</span>
+									<span class="checkmark"></span>
+									<span class="">@DayoAkin</span>
+									<span class="time">53m</span>
+								</div>
+								<div></div>
+							</div>
+							<div class="row-2">At least 45 people dir in military plane crash in philipines.</div>
+								<img src="./assets/q14.png" class="row-wrapper">
+							<div class="row-option">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-2" id="_other_slide">
+				<div class="mobile_cls_btn" onclick="_hide('_other_slide',_animation_right_to_left)"></div>
+				<div class="row-1">
+					<input type="" name="" placeholder="Search Twitter">
+				</div>
+				<div class="row-2">
+					<h2 class="b_line">What's happening?</h2>
+					<div class="b_line">
+						<p class="_grey">US national news, LIVE</p>
+						<p class="round-box _bold">24 dead and 121 still missing after partial building collapse near Miami.</p>
+					</div>
+					<div class="b_line">
+						<div class="_flex">
+							<p class="_grey">Trending in Nigeria</p>
+							<div class="_dot">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<h3>Endsars</h3>
+						<p>21.6k Tweets</p>
+					</div>
+					<div class="_bold _blue">Show more</div>
+				</div>
+				<div class="row-3">
+					<h2 class="b_line">Who to follow</h2>
+					<table>
+						<tbody>
+							<tr class="b_line">
+								<td>
+									<img src="./assets/q5.png">
+								</td>
+								<td class="_flex">
+									<div>
+										<h3>Doggie Pal</h3>
+										<p class="_grey">@DoodiePal</p>
+									</div>
+									<div class="btn button-1">follow</div>
+								</td>
+							</tr>
+							<tr class="b_line">
+								<td>
+									<img src="./assets/q11.png">
+								</td>
+								<td class="_flex">
+									<div>
+										<h3>Doggie Pal</h3>
+										<p class="_grey">@DoodiePal</p>
+									</div>
+									<div class="btn button-1">follow</div>
+								</td>
+							</tr>
+							<tr class="b_line">
+								<td>
+									<img src="./assets/q6.png">
+								</td>
+								<td class="_flex">
+									<div>
+										<h3>Doggie Pal</h3>
+										<p class="_grey">@DoodiePal</p>
+									</div>
+									<div class="btn button-1">follow</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="_bold _blue">Show more</div>
+				</div>
+				<div class="row-4 _flex">
+					<h2>Messages</h2>
+					<div></div>
+					<div class="_msg_tag"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>

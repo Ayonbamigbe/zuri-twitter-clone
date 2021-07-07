@@ -16,7 +16,7 @@ module.exports = (req,res)=>{
             image: '/img/' + image.name,
             userid: req.session.userId
         })
-        res.redirect('/')
+        res.redirect('/homepage')
     })
 }
 
