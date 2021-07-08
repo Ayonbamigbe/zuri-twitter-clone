@@ -3,9 +3,18 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="./css/my_font.css">
-	<link rel="stylesheet" type="text/css" href="./css/homepage.css">
-	<script type="text/javascript" src="./js/home.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/my_font.css">
+	<link rel="stylesheet" type="text/css" href="/css/homepage.css">
+	<script type="text/javascript" src="/js/home.js"></script>
+	<style type="text/css">
+		._flex button{
+			font-size: 1rem;
+			padding-bottom: 1rem;
+			font-weight: bold;
+			outline: none;
+			color: var(--lightblue);
+		}
+	</style>
 </head>
 <body class="dark_mode" id="">
 	<span style="visibility: none" id="_scroll_up_id"></span>
@@ -61,18 +70,19 @@
 				<div class="button">
 					<div class="btn">Tweet</div>
 				</div>
-				<% if(loggedIn) { %>
-				<div class="_flex _flex_edt">
-					<img src="./assets/q2.jpeg">
-					<div>
-						<h3>XXXXX</h3>
-						<p class="_grey">@XXXXX</p>
+				
+					<div class="_flex _flex_edt">
+
+						<img src="./assets/q2.jpeg">
+						<div>
+							<h3>XXXXX</h3>
+							<p class="_grey">@XXXXX</p>
+						</div>
+						<a href="/auth/logout" ><button class="_dot">
+							Log out
+						</button></a>
 					</div>
-					<button class="_dot">
-						<span><a href="/auth/logout" >Log out</a></span>
-					</button>
-				<% } %>
-				</div>
+				
 			</div>
 			<div class="mobile_btn" onclick="_show('_mobile_menu_slide',_animation_bottom_to_top)"></div>
 		</div>

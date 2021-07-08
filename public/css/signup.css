@@ -72,13 +72,13 @@ a{
 	border-color: var(--white);
 }
 
-.content{
+.content-qw{
 	display: flex;
 	box-shadow: 0px 0px 2px black;
 	width: 80%;
 }
 
-.content .section-1{
+.content-qw .section-1{
 	width:40%;
 	min-height: 30rem;
 	background-color: var(--dim-blue);
@@ -93,7 +93,7 @@ a{
 }
 
 
-.content .section-1:after{
+.content-qw .section-1:after{
 	content: "";
 	position: absolute;
 	height: 100%;
@@ -106,7 +106,7 @@ a{
 	background-size: contain;
 }
 
-.content .section-1 ul{
+.content-qw .section-1 ul{
 	display: flex;
 	flex-direction: column;
 	gap:1.5rem;
@@ -116,20 +116,19 @@ a{
 	z-index:2; 
 }
 
-.content .section-1 li{
+.content-qw .section-1 li{
 	display: flex;
 	align-items: center;
 }
-.content .section-1 ul img{
+.content-qw .section-1 ul img{
 	width: 1.5rem;
 	height: 1.5rem;
 	margin-right: 5px;
 }
 
-.content .section-2{
+.content-qw .section-2{
 	width: 60%;
-	padding: 1rem 10rem;
-	padding-top: 3rem;
+	padding: 6rem 5rem;
 	display: flex;
 	flex-direction: column;
 
@@ -153,13 +152,17 @@ a{
 	background-size: contain;
 }
 
+body{
+      	padding-bottom: 3rem;
+	}
+
 @media (max-width: 1236px){
-	.content{
+	.content-qw{
 		width: 90%;
 	}
 
-	.content .section-2{
-		padding: 4rem 5rem;
+	.content-qw .section-2{
+		padding: 4rem 3rem;
 	}
 }
 
@@ -169,13 +172,13 @@ a{
 		padding: 2rem 1rem;
 	}
 
-	.content{
+	.content-qw{
 		width: 95%;
 	}
 
-	.content .section-2{
-		padding: 4rem 5rem;
-	}
+	/*.content-qw .section-2{
+		padding: 4rem 3rem;
+	}*/
 }
 
 @media (max-width: 740px){
@@ -184,13 +187,13 @@ a{
 		padding: 0.5rem;
 	}
 
-	.content{
+	.content-qw{
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
 		width: 98%;
 	}
 
-	.content .section-1,.content .section-2{
+	.content-qw .section-1,.content-qw .section-2{
 		width: 100%;
 		padding: 4rem 1.5rem;
 		min-height: 10rem;

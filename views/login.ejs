@@ -5,7 +5,32 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/my_font.css">
+     <link rel="stylesheet" type="text/css" href="/css/create.css">
     <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    <style type="text/css">
+        .slide_1{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide_1 button{
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            padding: 1rem 5rem;
+            align-self:center;
+        }
+
+        /*body{
+            padding-bottom: 5rem;
+
+        }*/
+
+        .slide_1 .input_wrapper input{
+            width: 100%;
+        }
+
+
+    </style>
 </head>
 
 <body>
@@ -14,7 +39,7 @@
     <!--End of header-->
     
     <!--Here is the starting of my content-->
-    <div class="content">
+    <div class="content-qw">
         
         <div class="section-1">
             <ul>
@@ -36,10 +61,25 @@
             <div class="logo"></div>
             <h2>See whats's happening in the world right now</h2>
             <h4>Join Twitter today</h4>
-            <div class="button_group">
-                <a class="btn" href="/auth/register">Sign up</a>
-                <div class="btn button-1">Log in</div>
-            </div>
+            
+    <% if(errors != null && errors.length > 0){ %>
+          <ul class="list-group">
+          <% for(var i=0; i < errors.length; i++) { %>
+            <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+            <% } %>
+          </ul>
+        <% } %>
+   <form action="/users/login" method="POST" enctype="multipart/form-data">
+         <div class="slide_1">
+           <div class="input_wrapper" title="Name">
+            <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="<%= username %>">
+          </div>
+           <div class="input_wrapper" title="Password">
+            <input type="password" class="form-control" placeholder="Password" id="password" name="password" value="<%= password %>">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+      </form>
         </div>
         
     </div>
@@ -48,31 +88,7 @@
     <!--Beginning of footer-->
     <div class="footer"></div>
     <!--Ending of footer-->
-	<% if(errors != null && errors.length > 0){ %>
-          <ul class="list-group">
-          <% for(var i=0; i < errors.length; i++) { %>
-            <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
-            <% } %>
-          </ul>
-        <% } %>
-    <div><form action="/users/login" method="POST" enctype="multipart/form-data">
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls">
-            <label>User Name</label>
-            <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="<%= username %>">
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls">
-            <label>Password</label>
-            <input type="password" class="form-control" placeholder="Password" id="password" name="password" value="<%= password %>">
-          </div>
-        </div>
-        <br>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Login</button>
-        </div>
-      </form></div>
+    
 </body>
 
 </html>
