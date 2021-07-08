@@ -21,6 +21,7 @@ const homeController = require('./controllers/home');
 const storeTweetController = require('./controllers/storeTweet');
 const getTweetController = require('./controllers/getTweet');
 const newUserController = require('./controllers/newUser');
+const setUpUserController = require('./controllers/setUpUser')
 const storeUserController = require('./controllers/storeUser');
 const loginController = require('./controllers/login');
 const loginUserController = require('./controllers/loginUser');

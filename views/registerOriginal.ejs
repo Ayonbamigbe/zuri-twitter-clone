@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="/css/my_font.css">
+	<link rel="stylesheet" type="text/css" href="/css/create.css">
+	<script type="text/javascript" src="/js/create.js"></script>
+</head>
+<body>
+	<!--Begining of header-->
+	<div class="header"></div>
+	<!--End of header-->
+
+	<!--Here is the starting of my content-->
+	
+	<div class="all_slide">
+		<div class="slide_1" id="sld1" style="display: block;">
+            
+
+			<form action="/users/register" method="POST" enctype="multipart/form-data">
+				<div class="navigation">
+					<div class=""></div>
+					<div class="logo"></div>
+					<button class="next btn" type="submit">Register</button>
+				</div>
+                <div class="content">
+                    <h2>Create your account</h2>
+                <% if(errors != null && errors.length > 0){ %>
+                <ul class="list-group">
+                <% for(var i=0; i < errors.length; i++) { %>
+                    <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+                <% } %>
+                </ul>
+            	<% } %>
+                    <div class="input_wrapper" title="Name" foot_text="0/50">
+                        <input type="text" id="username" name="username" value="<%= username %>"  onkeyup="_update_text_len(event,this)" onkeydown="_write_text(event,this)">
+                    </div>
+                    <div class="input_wrapper" title="Password">
+                        <input type="password" id="password" name="password" value="<%= password %>">
+                    </div>
+                </div>
+			</form>
+		</div>
+    </div>
+</body>
+</html>
